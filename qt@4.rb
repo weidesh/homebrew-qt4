@@ -123,8 +123,8 @@ class QtAT4 < Formula
     args << "-no-phonon" if MacOS.version >= :sierra || MacOS::Xcode.version >= "8.0"
 
     args << "-openssl-linked"
-    args << "-I" << Formula["openssl@1.0"].opt_include
-    args << "-L" << Formula["openssl@1.0"].opt_lib
+    args << "-I" << Formula["weidesh/qt4/openssl@1.0"].opt_include
+    args << "-L" << Formula["weidesh/qt4/openssl@1.0"].opt_lib
 
     args << "-plugin-sql-mysql" if build.with? "mysql"
     args << "-plugin-sql-psql" if build.with? "postgresql"
